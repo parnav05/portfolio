@@ -3,289 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parnav Dev | DevOps Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<title>Parnav Dev | DevOps Portfolio</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-    min-height:100vh;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
-    overflow-x:hidden;
-    color:white;
+font-family:Arial,sans-serif;color:#fff;
+background:linear-gradient(135deg,#07111f,#0b2447,#09121f);
+min-height:100vh;
 }
-
-body::before{
-    content:'';
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#3b82f6;
-    border-radius:50%;
-    filter:blur(180px);
-    top:-150px;
-    left:-150px;
-    opacity:.5;
+body:before,body:after{
+content:"";position:fixed;border-radius:50%;filter:blur(120px);z-index:-1
 }
-
-body::after{
-    content:'';
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#8b5cf6;
-    border-radius:50%;
-    filter:blur(180px);
-    bottom:-150px;
-    right:-150px;
-    opacity:.5;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 10%;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-}
-
+body:before{width:350px;height:350px;background:#3b82f6;top:-100px;left:-100px}
+body:after{width:350px;height:350px;background:#9333ea;bottom:-100px;right:-100px}
+.container{width:90%;max-width:1200px;margin:auto}
 .glass{
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.15);
-    box-shadow:0 8px 32px rgba(0,0,0,.3);
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:24px;
+box-shadow:0 8px 32px rgba(0,0,0,.3);
 }
-
-.hero{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    margin-top:40px;
-    border-radius:25px;
-    padding:60px;
-}
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:15px;
-}
-
-.hero h1 span{
-    color:#60a5fa;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.8;
-    color:#d1d5db;
-}
-
-.btns{
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    text-decoration:none;
-    color:white;
-    border-radius:12px;
-    margin-right:15px;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-}
-
-.primary{
-    background:#2563eb;
-}
-
-.secondary{
-    border:1px solid rgba(255,255,255,.2);
-}
-
-.section-title{
-    text-align:center;
-    margin:80px 0 40px;
-    font-size:40px;
-}
-
-.skills{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.skill-card{
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.skill-card h3{
-    margin-bottom:10px;
-}
-
-.projects{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-.project{
-    padding:30px;
-    border-radius:20px;
-}
-
-.project h3{
-    margin-bottom:15px;
-}
-
-.project p{
-    color:#d1d5db;
-}
-
-footer{
-    width:90%;
-    max-width:1200px;
-    margin:80px auto 30px;
-    text-align:center;
-    padding:30px;
-    border-radius:20px;
-}
-
+nav{margin:20px auto;padding:20px;display:flex;justify-content:space-between}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;padding:40px}
+.hero h1{font-size:70px}
+.hero h1 span{color:#60a5fa}
+.hero p{line-height:1.8;color:#ddd}
+.btn{display:inline-block;padding:14px 22px;margin:10px;border-radius:12px;text-decoration:none;color:#fff}
+.primary{background:#2563eb}
+.secondary{border:1px solid #999}
+.profile{text-align:center}
+.profile img{width:260px;height:260px;border-radius:50%;object-fit:cover;border:4px solid #60a5fa}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0}
+.card{padding:25px}
+h2{margin:20px 0}
+.skill{margin:12px 0}
+.bar{height:8px;background:#1f2937;border-radius:10px}
+.fill{height:100%;background:linear-gradient(90deg,#3b82f6,#a855f7);border-radius:10px}
+footer{text-align:center;padding:30px;margin:30px 0}
+a{color:#93c5fd}
 @media(max-width:768px){
-
-.hero{
-    padding:30px;
-}
-
-.hero h1{
-    font-size:40px;
-}
-
-.section-title{
-    font-size:30px;
-}
+.hero{grid-template-columns:1fr}
+.hero h1{font-size:45px}
 }
 </style>
 </head>
-
 <body>
-
-<nav>
-    <div class="logo">Parnav Dev</div>
+<div class="container">
+<nav class="glass">
+<h2>Parnav Dev</h2>
+<div>DevOps Portfolio</div>
 </nav>
 
 <section class="hero glass">
-    <h1>Hello, I'm <span>Parnav Dev</span></h1>
+<div>
+<h1>Parnav <span>Dev</span></h1>
+<h2>Linux System Administrator | Aspiring DevOps Engineer</h2>
+<br>
+<p>
+Currently working as a Linux System Administrator at HCL Technologies with 3.5+ years of experience.
+Experienced in Linux Administration, AWS, Docker, Kubernetes, Terraform, Ansible, GitHub Actions,
+Monitoring and CI/CD Automation.
+</p>
+<br>
+<a class="btn primary" href="https://drive.google.com/file/d/1XOYKtoiBJVWXLTnNH-z0IJi0pa-Gx2Md/view?usp=drive_link">Download Resume</a>
+<a class="btn secondary" href="https://github.com/parnav05">GitHub</a>
+</div>
 
-    <p>
-        DevOps Engineer with 3.5+ years of experience in Linux Administration,
-        AWS Cloud, Docker, Kubernetes, Terraform, Ansible, GitHub Actions,
-        Monitoring, Automation and CI/CD Pipeline implementation.
-    </p>
-
-    <div class="btns">
-        <a href="#" class="btn primary">Download Resume</a>
-        <a href="https://github.com/" class="btn secondary">GitHub</a>
-    </div>
+<div class="profile">
+<img src="assets/profile.jpg" alt="Parnav Dev">
+<p style="margin-top:15px">📍 NOIDA, India</p>
+</div>
 </section>
 
-<h2 class="section-title">Skills</h2>
-
-<section class="skills">
-
-<div class="skill-card glass">
-<h3>Linux</h3>
-<p>System Administration & Troubleshooting</p>
+<div class="grid">
+<div class="glass card"><h2>3.5+</h2><p>Years Experience</p></div>
+<div class="glass card"><h2>2+</h2><p>Major Projects</p></div>
+<div class="glass card"><h2>12+</h2><p>Technologies</p></div>
+<div class="glass card"><h2>4</h2><p>Certifications</p></div>
 </div>
 
-<div class="skill-card glass">
-<h3>AWS Cloud</h3>
-<p>EC2, IAM, S3, VPC, CloudWatch</p>
+<div class="grid">
+<div class="glass card">
+<h2>About Me</h2>
+<p>I’m currently working as a Linux System Administrator at HCL Technologies with over 3.5 years of hands-on experience in managing production Linux environments. My focus is transitioning into DevOps through automation, CI/CD and cloud technologies.</p>
 </div>
 
-<div class="skill-card glass">
-<h3>Docker</h3>
-<p>Containerization & Image Management</p>
+<div class="glass card">
+<h2>Skills</h2>
+<div class="skill">Linux<div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="skill">AWS<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="skill">Docker<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="skill">Kubernetes<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+<div class="skill">Terraform<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="skill">GitHub Actions<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+</div>
 </div>
 
-<div class="skill-card glass">
-<h3>Kubernetes</h3>
-<p>Orchestration & Scaling</p>
+<h2>Featured Projects</h2>
+<div class="grid">
+<div class="glass card">
+<h3>Expense Tracker</h3>
+<p>Expense management application for tracking income, expenses and analytics.</p>
+<br>
+<a href="https://github.com/parnav05/Expense_tracker">View Project</a>
 </div>
 
-<div class="skill-card glass">
-<h3>Terraform</h3>
-<p>Infrastructure as Code</p>
+<div class="glass card">
+<h3>AI Interview Platform</h3>
+<p>AI-powered interview practice platform with automated feedback and assessment.</p>
+<br>
+<a href="https://github.com/parnav05/ai-interview-platform-">View Project</a>
+</div>
 </div>
 
-<div class="skill-card glass">
-<h3>GitHub Actions</h3>
-<p>CI/CD Pipeline Automation</p>
+<h2>Experience</h2>
+<div class="glass card">
+<h3>HCL Technologies (2021 - Present)</h3>
+<ul>
+<li>Linux server administration and troubleshooting.</li>
+<li>User management and permissions.</li>
+<li>System monitoring, patching and performance tuning.</li>
+<li>Automation and CI/CD using Git, Jenkins, Docker and GitHub Actions.</li>
+<li>Exposure to AWS and Azure cloud environments.</li>
+</ul>
 </div>
 
-</section>
-
-<h2 class="section-title">Projects</h2>
-
-<section class="projects">
-
-<div class="project glass">
-<h3>E-Commerce CI/CD Pipeline</h3>
-<p>
-Built complete CI/CD pipeline using GitHub Actions,
-Docker and AWS deployment.
-</p>
+<h2>Contact</h2>
+<div class="glass card">
+<p>Email: parnavdev57@gmail.com</p>
+<p>Phone: 8709733768</p>
+<p>LinkedIn: www.linkedin.com/in/parnav-dev-3781a9191</p>
+<p>GitHub: github.com/parnav05</p>
+<p>Location: NOIDA</p>
 </div>
-
-<div class="project glass">
-<h3>Kubernetes Monitoring Stack</h3>
-<p>
-Implemented Prometheus and Grafana monitoring
-with custom dashboards and alerts.
-</p>
-</div>
-
-<div class="project glass">
-<h3>Infrastructure Automation</h3>
-<p>
-Provisioned AWS infrastructure using Terraform
-and automated configuration using Ansible.
-</p>
-</div>
-
-</section>
 
 <footer class="glass">
-    <h2>Contact Me</h2>
-    <br>
-    <p>Email: yourmail@example.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/yourusername</p>
-    <br>
-    <p>© 2026 Parnav Dev | DevOps Engineer</p>
+© 2026 Parnav Dev | Built for GitHub Pages
 </footer>
-
+</div>
 </body>
 </html>
